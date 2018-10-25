@@ -1,0 +1,16 @@
+<div id="search-component" class="search">
+  <h4>Hero Search</h4>
+
+  <input #searchBox id="search-box" (keyup)="search(searchBox.value)">
+
+  <ul class="search-result">
+    <!-- heroes$ 表明這不是array, 是Observable, ngFor不能直接使用Observable, 
+    | async 是Angular's AsyncPipe 會自動訂閱到Observable, 不用在component裡面subscribes -->
+    <li *ngFor="let hero of heroes$ | async" >
+      <a routerLink="/detail/{{hero.id}}">
+        {{hero.name}}
+      </a>
+    </li>
+  </ul>
+
+</div>
