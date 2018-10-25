@@ -46,3 +46,18 @@
     margin-right: 0.8em;
     border-radius: 4px 0 0 4px;
 }
+.add_hero {
+    background-color: #eee;
+}
+.add_hero input {
+    margin: 7px;
+}
+.add_hero button {
+    border-bottom-color: #607D8B;
+}
+button.delete {
+    position: absolute;
+    right: 0px;
+    background-color: pink !important;
+    color: white;
+}

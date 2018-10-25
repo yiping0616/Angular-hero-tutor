@@ -17,7 +17,7 @@ export class InMemoryDataService implements InMemoryDbService {
     ];
     return {heroes};
   }
-  
+
   // Overrides the genId method to ensure that a gero always has an id.
   // if heroes array is empty, return the initail number(11)
   // if not empty, return the hightest hero id +1
