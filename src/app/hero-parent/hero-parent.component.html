@@ -1,0 +1,14 @@
+<div style="text-align: center;">
+  <h2>Hero Level UP !</h2>
+  <button *ngIf="point != 0" (click)="addMagic()">Magic</button>
+  <button *ngIf="point != 0" (click)="addPower()">Power</button>
+  <button *ngIf="point == 0" (click)="levelUp()">Level UP</button>
+  <app-hero-child 
+    [magicPoint]="magic"
+    [powerPoint]="power"
+    [totalPoint]="point"
+    [magicCheck]="magicCheck"
+    [powerCheck]="powerCheck"
+    (pointDown)="pointDown($event)"
+  ></app-hero-child>
+</div>
